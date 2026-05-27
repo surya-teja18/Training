@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Student</title>
+    <style>
+        :root {
+            --bg: #f4f7fb;
+            --card: #ffffff;
+            --accent: #0f0e0e;
+            --muted: #6b7280;
+            --primary: #3b82f6;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--accent);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--bg) url('download.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+            color: var(--accent);
+        }
+
+        .site-header {
+            background: transparent;
+            padding: 18px 24px
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        nav a {
+            background: var(--card);
+            color: var(--accent);
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06);
+            border: 1px solid rgba(15, 14, 14, 0.04)
+        }
+
+        nav a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(16, 24, 40, 0.08)
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 24px auto;
+            padding: 24px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.85));
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06)
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin: 0 0 12px;
+            text-align: center
+        }
+
+        p {
+            color: var(--muted);
+            line-height: 1.5
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--accent)
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        input[type=number],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e6e9ef;
+            border-radius: 8px;
+            background: var(--card)
+        }
+
+        input[type=submit],
+        button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer
+        }
+
+        input[type=submit]:hover,
+        button:hover {
+            filter: brightness(.95)
+        }
+
+        .form-row {
+            display: flex;
+            gap: 12px
+        }
+
+        .form-row .col {
+            flex: 1
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: transparent
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #eef2f7
+        }
+
+        th {
+            background: transparent;
+            color: var(--muted);
+            font-weight: 600
+        }
+
+        .center {
+            display: flex;
+            justify-content: center
+        }
+
+        @media (max-width:600px) {
+            .container {
+                margin: 12px;
+                padding: 16px
+            }
+
+            nav {
+                gap: 8px
+            }
+
+            h1 {
+                font-size: 1.2rem
+            }
+
+            .form-row {
+                flex-direction: column
+            }
+        }
+        .muted {
+            color: var(--muted)
+        }
+
+        .btn-muted {
+            background: #eef2f7;
+            color: var(--accent);
+            border: 1px solid #e6e9ef
+        }
+
+        .action-col {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-edit, .btn-delete {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .btn-edit {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-delete {
+            background: #ef4444;
+            color: white;
+        }
+
+        .edit-form {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #e6e9ef;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+
+        .edit-form h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="view_student.html">View Students</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Edit Student</h1>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Surya</td>
+                    <td>21</td>
+                    <td>A</td>
+                    <td>
+                        <div class="action-col">
+                            <form action="edit_student.html" method="POST" style="display: inline;">
+                                <input type="hidden" name="action" value="edit">
+                                <input type="hidden" name="student_id" value="1">
+                                <input type="hidden" name="name" value="Surya">
+                                <input type="hidden" name="age" value="21">
+                                <input type="hidden" name="grade" value="A">
+                                <button type="submit" class="btn-edit">Edit</button>
+                            </form>
+                            <form action="edit_student.html" method="POST" style="display: inline;">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="student_id" value="1">
+                                <button type="submit" class="btn-delete">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Teja</td>
+                    <td>22</td>
+                    <td>B</td>
+                    <td>
+                        <div class="action-col">
+                            <form action="edit_student.html" method="POST" style="display: inline;">
+                                <input type="hidden" name="action" value="edit">
+                                <input type="hidden" name="student_id" value="2">
+                                <input type="hidden" name="name" value="Teja">
+                                <input type="hidden" name="age" value="22">
+                                <input type="hidden" name="grade" value="B">
+                                <button type="submit" class="btn-edit">Edit</button>
+                            </form>
+                            <form action="edit_student.html" method="POST" style="display: inline;">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="student_id" value="2">
+                                <button type="submit" class="btn-delete">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="edit-form">
+            <h2>Edit Student Information</h2>
+            <form action="edit_student.html" method="POST">
+                <input type="hidden" name="action" value="update">
+                
+                <label for="student_id">Student ID</label>
+                <input type="hidden" id="student_id" name="student_id" value="">
+
+                <label for="edit_name">Name</label>
+                <input type="text" id="edit_name" name="name" required>
+
+                <label for="edit_age">Age</label>
+                <input type="number" id="edit_age" name="age" required>
+
+                <label for="edit_grade">Grade</label>
+                <input type="text" id="edit_grade" name="grade" required>
+
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <button type="submit" style="flex: 1; background: #3b82f6; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer;">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
