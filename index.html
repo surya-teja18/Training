@@ -3,361 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Local Community Event Portal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Responsive Navigation Bar</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <ul class="navMenu">
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="brand">My Website</div>
+      <ul class="nav-menu">
         <li><a href="#home">Home</a></li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="help.html" target="_blank" rel="noopener">Help</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main -->
   <main>
     <section id="home">
-      <div id="mainHeader">
-        <h1 class="highlight">Welcome to the Local Community Event Portal</h1>
-        <p class="description">This portal helps residents register for events, check locations, and access services.</p>
-        <p class="description"><span style="color: red; font-weight: bold;">Special offer:</span> registered residents get priority access to event sign-up.</p>
-        <ul class="infoList">
-          <li>Register early for limited-capacity events.</li>
-          <li>Check event locations before you travel.</li>
-          <li>Use the Help page for registration support.</li>
-        </ul>
+      <h1>Responsive Navigation Bar</h1>
+      <p>Resize the window to see the menu switch between horizontal and vertical layouts.</p>
+    </section>
+
+    <section class="profile-section">
+      <div class="profile-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUE3RobMTHdK5lCZ--pZTEAGCxGj4sipZMS4seaItxeTsUKEpzB87qT1lmUFvSlG90xmJoFeKZUEIRYAsXzbkmndje0JkeDFpbwAesYIbc2A&s=10" alt="Student Profile" class="profile-image" />
+        <div class="profile-details">
+          <h2>Virat Kohli</h2>
+          <p class="branch">Computer Science</p>
+          <p class="email">virat.kohli@gmail.com</p>
+        </div>
       </div>
     </section>
 
-    <section id="events">
-      <h2>Community Event Gallery</h2>
-      <p class="description">Browse upcoming community events and activities.</p>
-      
-      <table>
-        <caption>Past Community Events</caption>
-        <tr>
-          <th>Event One</th>
-          <th>Event Two</th>
-          <th>Event Three</th>
-        </tr>
-        <tr>
-          <td class="eventCard">
-            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600&q=80" alt="Park Cleanup" title="Neighborhood Park Cleanup" class="event-image" ondblclick="toggleEnlarge(this)" />
-            <h3>Park Cleanup Day</h3>
-            <p>Help refresh neighborhood green spaces.</p>
-          </td>
-          <td class="eventCard">
-            <img src="https://images.unsplash.com/photo-1488459716781-31db52582c9d?auto=format&fit=crop&w=600&q=80" alt="Farmers Market" title="Weekly Farmers Market" class="event-image" ondblclick="toggleEnlarge(this)" />
-            <h3>Farmers Market Fair</h3>
-            <p>Meet local growers and food makers.</p>
-          </td>
-          <td class="eventCard">
-            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=600&q=80" alt="Summer Concert" title="Outdoor Summer Concert" class="event-image" ondblclick="toggleEnlarge(this)" />
-            <h3>Outdoor Concert Series</h3>
-            <p>Enjoy live music in the community park.</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="eventCard">
-            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80" alt="Book Drive" title="Community Book Drive" class="event-image" ondblclick="toggleEnlarge(this)" />
-            <h3>Community Book Drive</h3>
-            <p>Donate books for local reading programs.</p>
-          </td>
-          <td class="eventCard">
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Health Fair" title="Health and Wellness Fair" class="event-image" ondblclick="toggleEnlarge(this)" />
-            <h3>Health &amp; Wellness Fair</h3>
-            <p>Find wellness resources and screenings.</p>
-          </td>
-          <td class="eventCard">
-            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Art Festival" title="Local Art Festival" class="event-image" ondblclick="toggleEnlarge(this)" />
-            <h3>Art Festival Celebration</h3>
-            <p>Explore creative work from local artists.</p>
-          </td>
-        </tr>
-      </table>
-    </section>
-
-    <section id="bulletin">
-      <h2>Community Bulletin</h2>
-      <article class="newsArticle">
-        <p>The city council has announced a new season of neighborhood programs focused on recreation, public safety, and local volunteer opportunities. Residents can join weekend cleanups, attend open-air concerts, and visit pop-up information desks at participating community centers.</p>
-        <p>Registration support will be available during weekday office hours for anyone who needs help choosing an event or updating contact information. Event coordinators also recommend checking the portal before attending, since weather updates and venue changes will be posted online first.</p>
-        <p>Community groups are invited to submit announcements for future bulletins. Notices should include the event name, location, date, contact details, and a short description so residents can quickly understand how to participate.</p>
-      </article>
-    </section>
-
-    <section id="registration">
-      <h2>Event Registration</h2>
-      <form id="registrationForm">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required autofocus />
-
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" placeholder="name@example.com" required />
-
-        <label for="eventDate">Event Date:</label>
-        <input type="date" id="eventDate" name="eventDate" required />
-
-        <label for="eventType">Event Type:</label>
-        <select id="eventType" name="eventType" required>
-          <option value="">-- Select an event --</option>
-          <option value="cleanup">Park Cleanup</option>
-          <option value="market">Farmers Market</option>
-          <option value="concert">Summer Concert</option>
-        </select>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Tell us about your interest or questions..." required></textarea>
-
-        <button type="submit" class="cta-button">Register Now</button>
-        <button type="button" id="clearPreferences">Clear Preferences</button>
-      </form>
-      <div class="visibilityDemo">
-        <div class="demoBox visibleBox">Visible box</div>
-        <div class="demoBox hiddenBox">Hidden box keeps its space</div>
-        <div class="demoBox noneBox">Display none removes this box</div>
-        <div class="demoBox visibleBox">Next visible box</div>
+    <section class="gallery-section">
+      <h2>Responsive Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://picsum.photos/seed/1/400/300" alt="Gallery image 1" /></div>
+        <div class="gallery-item"><img src="https://picsum.photos/seed/2/400/300" alt="Gallery image 2" /></div>
+        <div class="gallery-item"><img src="https://picsum.photos/seed/3/400/300" alt="Gallery image 3" /></div>
+        <div class="gallery-item"><img src="https://picsum.photos/seed/4/400/300" alt="Gallery image 4" /></div>
+        <div class="gallery-item"><img src="https://picsum.photos/seed/5/400/300" alt="Gallery image 5" /></div>
+        <div class="gallery-item"><img src="https://picsum.photos/seed/6/400/300" alt="Gallery image 6" /></div>
+        <div class="gallery-item"><img src="https://picsum.photos/seed/7/400/300" alt="Gallery image 7" /></div>
+        <div class="gallery-item"><img src="https://picsum.photos/seed/8/400/300" alt="Gallery image 8" /></div>
       </div>
-      <div id="preferenceStatus"></div>
-      <output id="registrationOutput"></output>
     </section>
 
-    <section id="feedback">
-      <h2>Event Feedback</h2>
-      
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" onblur="validatePhone()" />
-      <div id="phoneMessage"></div>
-
-      <label for="eventFee">Select Event for Fee Info:</label>
-      <select id="eventFee" name="eventFee" onchange="displayEventFee()">
-        <option value="">-- Select an event --</option>
-        <option value="cleanup">Park Cleanup - Free</option>
-        <option value="market">Farmers Market - $5</option>
-        <option value="concert">Summer Concert - $15</option>
-      </select>
-      <div class="fee-display" id="feeDisplay" style="display: none;"></div>
-
-      <label for="feedbackText">Your Feedback:</label>
-      <textarea id="feedbackText" name="feedbackText" placeholder="Share your thoughts about the event..." onkeyup="countCharacters()"></textarea>
-      <div id="charCount">Characters: 0</div>
-
-      <button type="button" onclick="submitFeedback()">Submit Feedback</button>
-      <div id="confirmationMessage"></div>
+    <section class="dashboard-section">
+      <h2>Student Management Dashboard</h2>
+      <div class="dashboard-wrapper">
+        <aside class="dashboard-sidebar">
+          <h3>Menu</h3>
+          <ul>
+            <li>Students</li>
+            <li>Courses</li>
+            <li>Attendance</li>
+            <li>Reports</li>
+          </ul>
+        </aside>
+        <div class="dashboard-content">
+          <div class="dashboard-card">
+            <h3>Welcome back, Virat</h3>
+            <p>Review student performance and course assignments for this semester.</p>
+          </div>
+          <div class="dashboard-card">
+            <h4>Active Students</h4>
+            <p>198</p>
+          </div>
+          <div class="dashboard-card">
+            <h4>New Registrations</h4>
+            <p>24</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="eventMapping">
-      <h2>Event Mapping</h2>
-      <p class="description">Find nearby community events using your current location.</p>
-      <button type="button" id="findNearbyEvents">Find Nearby Events</button>
-      <div id="locationResult">Your coordinates will appear here.</div>
+    <section class="button-section">
+      <h2>Animated Button</h2>
+      <button class="animated-button">Hover Me</button>
     </section>
 
-    <section id="video">
-      <h2>Event Promo Video</h2>
-      <p class="description">Watch a short preview of our upcoming community events:</p>
-      <video id="promoVideo" width="500" controls oncanplay="videoReady()">
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-        Your browser does not support the video element.
-      </video>
-      <div id="videoStatus">Video ready to play</div>
+    <section class="expanding-card-section">
+      <h2>Expanding Card</h2>
+      <div class="expanding-card">Hover Over Me</div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="description">Contact city staff for help with registrations and event information.</p>
+    <section class="spinner-section">
+      <h2>Loading Spinner</h2>
+      <div class="spinner"></div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Local City Council</p>
-  </footer>
+    <section class="moving-ball-section">
+      <h2>Moving Ball</h2>
+      <div class="moving-ball-container">
+        <div class="moving-ball"></div>
+      </div>
+    </section>
 
-  <script>
-    const eventTypeSelect = document.getElementById('eventType');
-    const clearPreferencesButton = document.getElementById('clearPreferences');
-    const preferenceStatus = document.getElementById('preferenceStatus');
-    const preferredEventTypeKey = 'preferredEventType';
-    const findNearbyEventsButton = document.getElementById('findNearbyEvents');
-    const locationResult = document.getElementById('locationResult');
-
-    // Load saved event preference when the page opens
-    const savedEventType = localStorage.getItem(preferredEventTypeKey);
-    if (savedEventType) {
-      eventTypeSelect.value = savedEventType;
-      preferenceStatus.textContent = 'Preferred event type loaded.';
-    }
-
-    // Save selected event type for returning users
-    eventTypeSelect.addEventListener('change', function() {
-      if (this.value) {
-        localStorage.setItem(preferredEventTypeKey, this.value);
-        sessionStorage.setItem('lastSelectedEventType', this.value);
-        preferenceStatus.textContent = 'Preferred event type saved.';
-      } else {
-        localStorage.removeItem(preferredEventTypeKey);
-        sessionStorage.removeItem('lastSelectedEventType');
-        preferenceStatus.textContent = 'Preferred event type removed.';
-      }
-    });
-
-    // Clear all stored preferences
-    clearPreferencesButton.addEventListener('click', function() {
-      localStorage.clear();
-      sessionStorage.clear();
-      eventTypeSelect.value = '';
-      preferenceStatus.textContent = 'Preferences cleared.';
-    });
-
-    // Get the user's current location for nearby event mapping
-    findNearbyEventsButton.addEventListener('click', function() {
-      if (!navigator.geolocation) {
-        locationResult.textContent = 'Geolocation is not supported by this browser.';
-        return;
-      }
-
-      locationResult.textContent = 'Finding your location...';
-
-      navigator.geolocation.getCurrentPosition(
-        function(position) {
-          const latitude = position.coords.latitude.toFixed(6);
-          const longitude = position.coords.longitude.toFixed(6);
-          const accuracy = Math.round(position.coords.accuracy);
-
-          locationResult.innerHTML =
-            'Latitude: ' + latitude + '<br>' +
-            'Longitude: ' + longitude + '<br>' +
-            'Accuracy: within ' + accuracy + ' meters';
-        },
-        function(error) {
-          if (error.code === error.PERMISSION_DENIED) {
-            locationResult.textContent = 'Location permission was denied. Please allow location access to find nearby events.';
-          } else if (error.code === error.TIMEOUT) {
-            locationResult.textContent = 'Location request timed out. Please try again.';
-          } else if (error.code === error.POSITION_UNAVAILABLE) {
-            locationResult.textContent = 'Location information is currently unavailable.';
-          } else {
-            locationResult.textContent = 'Unable to retrieve your location.';
-          }
-        },
-        {
-          enableHighAccuracy: true,
-          timeout: 10000,
-          maximumAge: 0
-        }
-      );
-    });
-
-    // Warn user before leaving if form is incomplete
-    window.addEventListener('beforeunload', function(event) {
-      const form = document.getElementById('registrationForm');
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const eventDate = document.getElementById('eventDate').value;
-      const eventType = document.getElementById('eventType').value;
-
-      // Check if form has unsaved data
-      if (name || email || eventDate || eventType) {
-        event.preventDefault();
-        event.returnValue = 'You have unsaved registration data. Are you sure you want to leave?';
-        return 'You have unsaved registration data. Are you sure you want to leave?';
-      }
-    });
-
-    // Registration form submission
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
-      const output = document.getElementById('registrationOutput');
-      output.textContent = 'Thank you, ' + name + '! Your registration has been received.';
-      
-      // Clear form data and disable beforeunload warning
-      this.reset();
-    });
-
-    // Video ready to play handler
-    function videoReady() {
-      const videoStatus = document.getElementById('videoStatus');
-      videoStatus.classList.add('ready');
-      console.log('Video is ready to play');
-    }
-
-    // Toggle image enlargement on double-click
-    function toggleEnlarge(img) {
-      img.classList.toggle('enlarged');
-    }
-
-    // Validate phone number on blur
-    function validatePhone() {
-      const phone = document.getElementById('phone').value;
-      const message = document.getElementById('phoneMessage');
-      const phoneInput = document.getElementById('phone');
-      const phoneRegex = /^(\(\d{3}\) \d{3}-\d{4}|\d{3}-\d{3}-\d{4}|\d{10})$/;
-
-      if (phone === '') {
-        message.textContent = '';
-        phoneInput.classList.remove('phone-error');
-      } else if (phoneRegex.test(phone)) {
-        message.textContent = 'Phone number is valid';
-        message.className = 'success';
-        phoneInput.classList.remove('phone-error');
-      } else {
-        message.textContent = 'Please enter a valid phone number (e.g., (123) 456-7890)';
-        message.className = 'error';
-        phoneInput.classList.add('phone-error');
-      }
-    }
-
-    // Display event fee on dropdown change
-    function displayEventFee() {
-      const select = document.getElementById('eventFee');
-      const feeDisplay = document.getElementById('feeDisplay');
-      const value = select.value;
-
-      if (value === '') {
-        feeDisplay.style.display = 'none';
-      } else {
-        const feeMap = {
-          'cleanup': 'Park Cleanup - Free',
-          'market': 'Farmers Market - $5',
-          'concert': 'Summer Concert - $15'
-        };
-        feeDisplay.textContent = 'Selected Event Fee: ' + feeMap[value];
-        feeDisplay.style.display = 'block';
-      }
-    }
-
-    // Count characters in feedback textarea on key events
-    function countCharacters() {
-      const textarea = document.getElementById('feedbackText');
-      const charCount = document.getElementById('charCount');
-      charCount.textContent = 'Characters: ' + textarea.value.length;
-    }
-
-    // Submit feedback with confirmation
-    function submitFeedback() {
-      const feedback = document.getElementById('feedbackText').value;
-      const confirmMsg = document.getElementById('confirmationMessage');
-
-      if (feedback.trim() === '') {
-        confirmMsg.textContent = 'Please enter your feedback before submitting.';
-        confirmMsg.className = '';
-      } else {
-        confirmMsg.textContent = 'Thank you for your feedback! We appreciate your input.';
-        confirmMsg.className = 'show';
-        document.getElementById('feedbackText').value = '';
-        document.getElementById('charCount').textContent = 'Characters: 0';
-      }
-    }
-  </script>
+    <section class="bouncing-text-section">
+      <h2>Bouncing Text</h2>
+      <div class="bouncing-text">WELCOME Back Virat!</div>
+    </section>
+    <section class="traffic-signal-section">
+      <h2>Traffic Signal Animation</h2>
+      <div class="traffic-signal">
+        <div class="signal light red"></div>
+        <div class="signal light yellow"></div>
+        <div class="signal light green"></div>
+      </div>
+    </section>  </main>
 </body>
 </html>
