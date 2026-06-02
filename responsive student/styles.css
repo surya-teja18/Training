@@ -187,7 +187,7 @@ main {
 }
 
 .animated-button {
-  background: #2874f0;
+  background: #0a0c0f;
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -198,7 +198,8 @@ main {
 }
 
 .animated-button:hover {
-  background: #27ae60;
+  background: #85f3bc;
+  color: #110f0f;
   transform: scale(1.1);
 }
 
@@ -213,12 +214,12 @@ main {
 }
 
 .expanding-card {
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
   margin: 0 auto;
-  background: #2874f0;
-  color: #fff;
+  background: #edf028;
+  color: #080808;
   border-radius: 16px;
   font-size: 1rem;
   transition: all 0.5s;
@@ -229,6 +230,9 @@ main {
   width: 250px;
   height: 250px;
   line-height: 250px;
+  background: #0e1311;
+  color: #ebe5e5;
+  transform: scale(1.1);
 }
 
 .spinner-section {
@@ -245,7 +249,7 @@ main {
   width: 80px;
   height: 80px;
   border: 10px solid rgba(0, 0, 0, 0.1);
-  border-top: 10px solid #2874f0;
+  border-top: 10px solid #f02828;
   border-radius: 50%;
   margin: 0 auto;
   animation: spin 1s linear infinite;
@@ -284,7 +288,7 @@ main {
 .moving-ball {
   width: 40px;
   height: 40px;
-  background: #2874f0;
+  background: #030303;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -316,7 +320,7 @@ main {
   display: inline-block;
   font-size: 2rem;
   font-weight: 700;
-  color: #2874f0;
+  color: #040b18;
   animation: bounceText 1s ease-in-out infinite;
 }
 
@@ -339,14 +343,14 @@ main {
   font-size: 1.5rem;
 }
 
-.traffic-signal {
+/* .traffic-signal {
   width: 100px;
   padding: 16px;
   background: #222;
   border-radius: 24px;
   margin: 0 auto;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .signal {
   width: 64px;
