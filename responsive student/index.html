@@ -3,38 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Navigation Bar</title>
+  <title>Student Management System</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  
+    <section id="home" class="old-exercise-heading">
+      <h1>Responsive Navigation Bar</h1>
+    </section>
   <header class="site-header">
     <nav class="navbar">
-      <div class="brand">My Website</div>
+      <a class="logo" href="index.html">CVR College</a>
       <ul class="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <!-- <li><a href="navigation.html">Navigation</a></li> -->
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="home">
-      <h1>Responsive Navigation Bar</h1>
-    </section>
-
-    <section class="profile-section">
-      <div class="profile-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUE3RobMTHdK5lCZ--pZTEAGCxGj4sipZMS4seaItxeTsUKEpzB87qT1lmUFvSlG90xmJoFeKZUEIRYAsXzbkmndje0JkeDFpbwAesYIbc2A&s=10" alt="Student Profile" class="profile-image" />
-        <div class="profile-details">
-          <h2>Virat Kohli</h2>
-          <p class="branch">Computer Science</p>
-          <p class="email">virat.kohli@gmail.com</p>
-        </div>
+    <section class="hero fade-in">
+      <div class="hero-content">
+        <p class="eyebrow">Student Management System</p>
+        <h1>Welcome to CVR College Website</h1>
+        <p>Manage student registration, attendance, and results through a simple responsive portal.</p>
+        <a class="primary-button" href="profile.html">Register Now</a>
       </div>
     </section>
 
+    <section class="features-section">
+      <h2>Features</h2>
+      <div class="features-grid">
+        <article class="feature-card fade-in">
+          <h3>Student Registration</h3>
+          <p>Add new student details and maintain profile records.</p>
+        </article>
+        <article class="feature-card fade-in">
+          <h3>Attendance</h3>
+          <p>Track daily attendance for every branch and class.</p>
+        </article>
+        <article class="feature-card fade-in">
+          <h3>Results</h3>
+          <p>View exam marks, grades, and student performance.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-links">
+      <h2>Exercise Pages</h2>
+      <div class="link-grid">
+        <a href="profile.html">Student Profile Card</a>
+        <a href="gallery.html">Responsive Image Gallery</a>
+      </div>
+    </section>
+
+
+<!-- 
     <section class="gallery-section">
       <h2>Responsive Gallery</h2>
       <div class="gallery-grid">
@@ -47,7 +73,7 @@
         <div class="gallery-item"><img src="https://picsum.photos/seed/7/400/300" alt="Gallery image 7" /></div>
         <div class="gallery-item"><img src="https://picsum.photos/seed/8/400/300" alt="Gallery image 8" /></div>
       </div>
-    </section>
+    </section> -->
 
     <section class="dashboard-section">
       <h2>Student Management Dashboard</h2>
@@ -104,6 +130,7 @@
       <h2>Bouncing Text</h2>
       <div class="bouncing-text">WELCOME Back Virat!</div>
     </section>
+
     <section class="traffic-signal-section">
       <h2>Traffic Signal Animation</h2>
       <div class="traffic-signal">
@@ -111,6 +138,11 @@
         <div class="signal light yellow"></div>
         <div class="signal light green"></div>
       </div>
-    </section>  </main>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 CVR College. All rights reserved.</p>
+  </footer>
 </body>
 </html>
