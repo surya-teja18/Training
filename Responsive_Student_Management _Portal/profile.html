@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Profile - CVRCE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">
+            <img src="https://i.pinimg.com/736x/cc/9b/be/cc9bbe385309a5ee04fa0a305cbd01cf.jpg" alt="College Logo" class="me-2 rounded-circle">CVRCE
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#profileNavbar" aria-controls="profileNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="profileNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#courses">Courses</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+              <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="profile.html">Profile</a></li>
+            </ul>
+            <a href="index.html" class="btn btn-outline-light ms-lg-3 mt-3 mt-lg-0">Back Home</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+        <div class="row justify-content-center page-hero">
+          <div class="col-lg-8 text-center">
+            <h1 class="display-6">Student Profile</h1>
+            <p class="lead text-muted mt-3">Review student identity, course details, and quick actions in one tidy profile view.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+              <div class="row g-0 align-items-center">
+                <div class="col-md-4 text-center p-4 profile-panel text-white">
+                  <img src="https://documents.iplt20.com/ipl/IPLHeadshot2026/2.png" class="img-fluid rounded-circle mb-4 border border-white" alt="Profile Image">
+                  <h3 class="h5 mb-1">Virat Kohli</h3>
+                  <p class="mb-0 text-white-75">Computer Science</p>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h4 class="card-title mb-3">Academic Details</h4>
+                    <ul class="list-group list-group-flush mb-4">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Roll Number</span>
+                        <strong>23B81A05Q2</strong>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Email</span>
+                        <strong>virat.kohli@example.com</strong>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Mobile</span>
+                        <strong>+91 98765 43210</strong>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>Branch</span>
+                        <strong>Computer Science</strong>
+                      </li>
+                    </ul>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                      <a href="dashboard.html" class="btn btn-primary">Back to Dashboard</a>
+                      <button class="btn btn-outline-primary">Edit Profile</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4 bg-primary text-white">
+      <div class="container text-center small">
+        &copy; 2026 CVR College of Engineering. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>

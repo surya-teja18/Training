@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Registration - CVRCE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">
+            <img src="https://i.pinimg.com/736x/cc/9b/be/cc9bbe385309a5ee04fa0a305cbd01cf.jpg" alt="College Logo" class="me-2 rounded-circle">CVRCE
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#registrationNavbar" aria-controls="registrationNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="registrationNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#courses">Courses</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+              <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="registration.html">Registration</a></li>
+            </ul>
+            <a href="index.html" class="btn btn-outline-light ms-lg-3 mt-3 mt-lg-0">Back Home</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+        <div class="row justify-content-center page-hero">
+          <div class="col-lg-8 text-center">
+            <h1 class="display-6">Student Registration</h1>
+            <p class="lead text-muted mt-3">Complete the form below to enroll in the student management portal. It takes just a few minutes!</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="card border-0 shadow-lg">
+              <div class="card-body p-5">
+                <form class="row g-4 needs-validation" novalidate>
+                  <div class="col-md-6">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter full name" required>
+                    <div class="invalid-feedback">Please provide your full name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="rollNumber" class="form-label">Roll Number</label>
+                    <input type="text" class="form-control" id="rollNumber" placeholder="Enter roll number" required>
+                    <div class="invalid-feedback">Roll number is required.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="emailAddress" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">@</span>
+                      <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com" required>
+                      <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="mobileNumber" class="form-label">Mobile Number</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">+91</span>
+                      <input type="tel" class="form-control" id="mobileNumber" placeholder="1234567890" pattern="\d{10}" maxlength="10" required>
+                      <div class="invalid-feedback">Enter a valid 10-digit mobile number.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Gender</label>
+                    <select class="form-select" required>
+                      <option value="" selected disabled>Choose gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                    <div class="invalid-feedback">Please select your gender.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Branch</label>
+                    <select class="form-select" required>
+                      <option value="" selected disabled>Select branch</option>
+                      <option>Computer Science</option>
+                      <option>Business Studies</option>
+                      <option>Design & Media</option>
+                      <option>Mathematics</option>
+                    </select>
+                    <div class="invalid-feedback">Branch selection is required.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" required>
+                    <div class="invalid-feedback">Please enter your date of birth.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="photoUpload" class="form-label">Upload Photo</label>
+                    <input class="form-control" type="file" id="photoUpload" accept="image/*" required>
+                    <div class="invalid-feedback">Please upload a profile photo.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+                    <div class="invalid-feedback">Address is required.</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+                      <label class="form-check-label" for="termsCheck">I agree to the terms and conditions.</label>
+                      <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button class="btn btn-primary btn-lg px-5" type="submit">Submit Registration</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4 bg-primary text-white">
+      <div class="container text-center small">
+        &copy; 2026 CVR College of Engineering. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      (() => {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      })();
+    </script>
+  </body>
+</html>

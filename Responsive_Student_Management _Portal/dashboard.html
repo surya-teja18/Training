@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Dashboard - CVRCE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">
+            <img src="https://i.pinimg.com/736x/cc/9b/be/cc9bbe385309a5ee04fa0a305cbd01cf.jpg" alt="College Logo" class="me-2 rounded-circle">CVRCE
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardNavbar" aria-controls="dashboardNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="dashboardNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#courses">Courses</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+              <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a></li>
+            </ul>
+            <a href="index.html" class="btn btn-outline-light ms-lg-3 mt-3 mt-lg-0">Back Home</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+        <div class="page-hero d-flex flex-column flex-md-row justify-content-between align-items-start gap-3">
+          <div>
+            <h1 class="display-6">Student Dashboard</h1>
+            <p class="text-muted mb-0 mt-2">Monitor student attendance, placements, and enrollment totals in one responsive dashboard.</p>
+          </div>
+          <div class="w-100 w-md-auto">
+            <div class="input-group">
+              <span class="input-group-text">Search</span>
+              <input id="searchInput" type="search" class="form-control" placeholder="Search by roll no, name, or branch">
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <div class="col-sm-6 col-lg-3">
+            <div class="card stat-card h-100">
+              <div class="card-body">
+                <h6 class="stat-label mb-3">Total Students</h6>
+                <h2 class="fw-bold text-primary">520</h2>
+                <span class="badge bg-success mt-2">Updated now</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card stat-card success h-100">
+              <div class="card-body">
+                <h6 class="stat-label mb-3">Present Students</h6>
+                <h2 class="fw-bold text-success">462</h2>
+                <span class="badge bg-success mt-2">In session</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card stat-card danger h-100">
+              <div class="card-body">
+                <h6 class="stat-label mb-3">Absent Students</h6>
+                <h2 class="fw-bold text-danger">58</h2>
+                <span class="badge bg-warning text-dark mt-2">Need follow-up</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card stat-card accent h-100">
+              <div class="card-body">
+                <h6 class="stat-label mb-3">Placements</h6>
+                <h2 class="fw-bold text-primary">148</h2>
+                <span class="badge bg-info text-dark mt-2">Q2 results</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table align-middle mb-0" id="studentTable">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Roll No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Branch</th>
+                    <th scope="col">Attendance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>101</td>
+                    <td>Priya Sharma</td>
+                    <td>Computer Science</td>
+                    <td><span class="badge bg-success">Present</span></td>
+                  </tr>
+                  <tr>
+                    <td>102</td>
+                    <td>Rohan Gupta</td>
+                    <td>Business Studies</td>
+                    <td><span class="badge bg-danger">Absent</span></td>
+                  </tr>
+                  <tr>
+                    <td>103</td>
+                    <td>Ayesha Khan</td>
+                    <td>Design & Media</td>
+                    <td><span class="badge bg-success">Present</span></td>
+                  </tr>
+                  <tr>
+                    <td>104</td>
+                    <td>Vikram Singh</td>
+                    <td>Computer Science</td>
+                    <td><span class="badge bg-success">Present</span></td>
+                  </tr>
+                  <tr>
+                    <td>105</td>
+                    <td>Anika Verma</td>
+                    <td>Mathematics</td>
+                    <td><span class="badge bg-danger">Absent</span></td>
+                  </tr>
+                  <tr>
+                    <td>106</td>
+                    <td>Aditya Patel</td>
+                    <td>Business Studies</td>
+                    <td><span class="badge bg-success">Present</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4 bg-primary text-white">
+      <div class="container text-center small">
+        &copy; 2026 CVR College of Engineering. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      const searchInput = document.getElementById('searchInput');
+      const studentTable = document.getElementById('studentTable');
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        const rows = studentTable.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(query) ? '' : 'none';
+        });
+      });
+    </script>
+  </body>
+</html>
