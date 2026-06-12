@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        :root {
+            --bg: #f4f7fb;
+            --card: #ffffff;
+            --accent: #0f0e0e;
+            --muted: #6b7280;
+            --primary: #3b82f6;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--accent);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--bg) url('download.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+            color: var(--accent);
+        }
+
+        .site-header {
+            background: transparent;
+            padding: 18px 24px
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+
+        nav a {
+            background: var(--card);
+            color: var(--accent);
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06);
+            border: 1px solid rgba(15, 14, 14, 0.04)
+        }
+
+        nav a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(16, 24, 40, 0.08)
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 24px auto;
+            padding: 24px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.85));
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06)
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin: 0 0 12px;
+            text-align: center
+        }
+
+        p {
+            color: var(--muted);
+            line-height: 1.5
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--accent)
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        input[type=number],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e6e9ef;
+            border-radius: 8px;
+            background: var(--card)
+        }
+
+        input[type=submit],
+        button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer
+        }
+
+        input[type=submit]:hover,
+        button:hover {
+            filter: brightness(.95)
+        }
+
+        .form-row {
+            display: flex;
+            gap: 12px
+        }
+
+        .form-row .col {
+            flex: 1
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: transparent
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #eef2f7
+        }
+
+        th {
+            background: transparent;
+            color: var(--muted);
+            font-weight: 600
+        }
+
+        .center {
+            display: flex;
+            justify-content: center
+        }
+
+        @media (max-width:600px) {
+            .container {
+                margin: 12px;
+                padding: 16px
+            }
+
+            nav {
+                gap: 8px
+            }
+
+            h1 {
+                font-size: 1.2rem
+            }
+
+            .form-row {
+                flex-direction: column
+            }
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .btn-muted {
+            background: #eef2f7;
+            color: var(--accent);
+            border: 1px solid #e6e9ef
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="index.html">Home</a>
+            <!-- <a href="dashboard.html">Dashboard</a>
+            <a href="add_student.html">Add Student</a>
+            <a href="view_student.html">View Students</a> -->
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Student Management System</h1>
+        <p>Welcome to the Student Management System. This system allows you to manage student information, including
+            adding new students, viewing existing students, updating student details, and deleting student records.</p>
+    </div>
+</body>
+
+</html>

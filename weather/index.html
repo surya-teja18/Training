@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4 Day Weather Forecast</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+        
+        input {
+            padding: 5px;
+            width: 200px;
+        }
+        
+        button {
+            padding: 5px 10px;
+        }
+        
+        .forecast-box {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>4 Day Weather Forecast</h1>
+
+<div>
+    <input type="text" id="city" placeholder="Enter City Name">
+    <button onclick="search()">Search</button>
+</div>
+
+<div id="result"></div>
+
+<script>
+const API_KEY = "e869217d0a3a4dd83a29857fe5eb656f";
+
+function search() {
+    let cityName = document.getElementById("city").value;
+    
+    if (cityName == "") {
+        alert("Please enter city name");
+        return;
+    }
+    
+    let url = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + API_KEY + "&units=metric";
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            show4DayForecast(data);
+        })
+        .catch(error => {
+            document.getElementById("result").innerHTML = "Error: City not found";
+        });
+}
+
+function show4DayForecast(weatherData) {
+    let forecastList = weatherData.list;
+    let html = "<h2>Forecast for: " + weatherData.city.name + "</h2>";
+    
+    let day1 = forecastList[8];
+    let day2 = forecastList[16];
+    let day3 = forecastList[24];
+    let day4 = forecastList[32];
+    
+    let days = [day1, day2, day3, day4];
+    
+    for (let i = 0; i < days.length; i++) {
+        let dayData = days[i];
+        let date = dayData.dt_txt;
+        let temp = dayData.main.temp;
+        let tempMax = dayData.main.temp_max;
+        let tempMin = dayData.main.temp_min;
+        let description = dayData.weather[0].description;
+        let humidity = dayData.main.humidity;
+        
+        html += "<div class='forecast-box'>";
+        html += "<b>Date: " + date + "</b><br>";
+        html += "Temperature: " + temp + " C<br>";
+        html += "Max Temp: " + tempMax + " C<br>";
+        html += "Min Temp: " + tempMin + " C<br>";
+        html += "Condition: " + description + "<br>";
+        html += "Humidity: " + humidity + "%";
+        html += "</div>";
+    }
+    
+    document.getElementById("result").innerHTML = html;
+}
+
+</script>
+
+</body>
+</html>

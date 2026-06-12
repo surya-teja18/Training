@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "john123",
+      "email": "john@example.com",
+      "password": "pass123"
+    },
+    {
+      "id": "2",
+      "username": "jane456",
+      "email": "jane@example.com",
+      "password": "pass456"
+    },
+    {
+      "username": "surya",
+      "email": "surya@gmail.com",
+      "password": "cvr123",
+      "id": "B_GMQVUM2Sg"
+    }
+  ],
+  "students": [
+    {
+      "id": "oeV7qYjsdT0",
+      "name": "junead",
+      "email": "junead@gmail.com",
+      "phone": "5434809",
+      "course": "Computer Science",
+      "batch": "2024"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
